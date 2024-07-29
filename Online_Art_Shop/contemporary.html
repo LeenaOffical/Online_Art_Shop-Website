@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Spicy+Rice&family=Ultra&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header id="myHeader" class="head">
+        <div>
+            <img src="./logo.jpg" width="58px" height="58px">
+            <span class="company-name" style="float: right;"> ART SHOP</span>
+        </div>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./index.html">ABOUT</a></li>
+                    <li><a href="./index.html">GALLERY</a></li>
+                    <li><a href="./cart.html">SHOP</a></li>
+                    <li>
+                        <button onclick="toggleModal('id01')" style="width:auto; background-color: white;">
+                            <i class='bx bxs-user-circle'></i>
+                        </button>
+                    
+                        <!-- Login Modal -->
+                        <div id="id01" class="modal">
+                            <div class="modal-content animate">
+                                <div class="imgcontainer">
+                                    <span onclick="toggleModal('id01')" class="close" title="Close Modal">&times;</span>
+                                    <img src="login_avatar.png" alt="Avatar" class="avatar">
+                                </div>
+                                <form action="index.html" method="post" onsubmit="return check()">
+                                    <div class="container">
+                                        <label for="userName"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="uname" id="userName" required>
+                                        <label for="userPw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" id="userPw" required>
+                                        <button id="login" type="submit">Login</button>
+                                        <label>
+                                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                                        </label>
+                                        <span class="pw"><p>Forgot <a href="#" style="font-family: normal;">password?</a></p></span>
+                                    </div>
+                                    <div class="container">
+                                        <button type="button" onclick="toggleModal('id01')" class="cancelbtn">Cancel</button>
+                                        <button type="button" onclick="toggleModal('id02')" class="signupbtn">Sign Up</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    
+                        <!-- Sign Up Modal -->
+                        <div id="id02" class="modal">
+                            <div class="modal-content">
+                                <span onclick="toggleModal('id02')" class="close" title="Close Modal">&times;</span>
+                                <form action="/index.html" onsubmit="handleRegister(event)">
+                                    <div class="container">
+                                        <h1>Sign Up</h1>
+                                        <p>Please fill in this form to create an account.</p>
+                                        <hr>
+                                        <label for="name"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="userName" id="name" required>
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                                        <label for="pw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="password" id="pw" required>
+                                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                                        <label>
+                                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                                        </label>
+                                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                                        <div class="clearfix">
+                                            <button type="button" onclick="toggleModal('id02')" class="cancelbtn">Cancel</button>
+                                            <button type="submit" class="signupbtn">Sign Up</button>
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- <div class="icon-div">
+            <i class='bx bxs-balloon'></i>
+        </div> -->
+    </header>
+    <main>
+        <div class="heading">
+            <h1>CONTEMPORARY ART FORMS</h1>
+         </div>
+         <br>
+         <br>
+         <section>
+         <div class="description">
+            <p>Contemporary art is often defined as “art of the current day.” But is that all contemporary art is? Or is it something more? We’re going to explore the world of contemporary art by looking at some examples from prominent contemporary artists around the world. 
+                By the end, you’ll know what contemporary art is, and what makes it unique. </p>
+        </div>
+        </section>
+        <section>
+            <div class="services-content">
+                <div class="box">
+                    <div class="bg11">
+                
+                    <h3 style="color: white;">Abstract Art</h3>
+                    <a href="./cart.html" class="btn">View More<i class='bx bxs-chevron-down' ></i></a>
+                    </div>
+                </div>
+            <div class="box">
+                <div class="bg12">
+            
+                <h3 style="color: white;">Figuratire Art</h3>
+                <a href="./cart.html" class="btn">View More<i class='bx bxs-chevron-down' ></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="bg13">
+                <h3 style="color: white;">Surrealistic Art</h3>
+                <a href="./cart.html" class="btn">View More<i class='bx bxs-chevron-down' ></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="bg14">
+                <h3 style="color: white;">Minimalistic Art</h3>
+                <a href="./cart.html" class="btn">View More<i class='bx bxs-chevron-down' ></i></a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+            
+        <div class="end" style="margin: 20px;height: 100px;">
+            <p>Follow us on:</p>
+            <a href="#head"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#head"><i class='bx bxl-twitter'></i></a>
+            <a href="#head"><i class='bx bxl-instagram'></i></a>
+            <a href="#head"><i class='bx bxl-gmail'></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    </body>
+    </html>

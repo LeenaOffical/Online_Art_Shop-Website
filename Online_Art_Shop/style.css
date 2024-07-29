@@ -1,0 +1,845 @@
+body{
+    background-attachment: fixed;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f3e4e4;
+    z-index: 9999;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.head i{
+    font-size: xxx-large;
+    color: #803c0fe5;
+}
+.company-name{
+    font-family: "Spicy Rice", serif;
+    font-size: 3em;
+    font-variant: small-caps;
+    color: #800f0f;
+}
+.header ul{
+    display: flex;
+    margin: 5px;
+}
+.header li{
+    list-style-type: none;
+    padding: 0px 10px;
+   
+}
+.header a{
+    font-family: "Spicy Rice", serif;
+    text-decoration-line: none;
+    color: rgb(24, 23, 23);
+    padding: 30px;
+    font-weight: normal;
+    font-size: large;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: none;
+    height: 100px;
+
+}
+.head{
+    background-attachment: fixed;
+    background-color: #fefefe;
+}
+.header a:hover{
+    color: #dc0c0c;
+}
+.header a:active{
+    color: #0c44dc;
+}
+.header :target{
+    color: black;
+    transition-duration: .5s;
+}
+
+.header i{
+    font-size: xx-large;
+    color: #800f0f;
+    background-color: white;
+    padding-bottom: 5px;
+
+}
+.header button{
+    position: relative;
+    padding-bottom: -10px;
+}
+/* 
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+ /* button {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    float: left;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 10%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+    height: auto;
+  }
+  .container button{
+    padding: 10px;
+    font-size: bolder;
+  }
+  
+  span.pw {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: white;
+    color: #f44336;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 100px;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+    height: fit-content;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  } */ 
+
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Input Fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background-color: #ddd;
+    color: #f44336;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Avatar */
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+/* Container */
+.container {
+    padding: 16px;
+    height: fit-content;
+}
+
+/* Cancel and Sign Up Buttons */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 100px;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.signupbtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}
+
+
+/* main h1{
+    color: black;
+    font-weight: normal;
+    font-size: x-large;
+    font-family: "Spicy Rice", serif;
+    padding: 10px;
+}
+img{
+    height: 500px;
+    width: 500px;
+    object-fit: scale-down;
+    object-position: right;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+.top{
+    position: relative;
+    float: right;
+}
+.top a{
+    color: darkred;
+}
+.icon-div>i{
+    color: darkred;
+}
+.icon-div{
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    top: 100px;
+    left: -10px;
+    animation-name: balloon;
+    position: absolute;
+}
+@keyframes balloon{
+    from{
+       
+    }
+    to{
+        transform:
+        translateX(100vw);
+    }
+} */
+
+/* .main-img img{
+    width: 1200px;
+    height: 400px;
+    position: fixed;
+    max-width: fit-content;
+} */
+.main-img{
+    background-image: url(https://images.pexels.com/photos/20967/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-attachment: fixed;
+    height: 400px;
+    opacity: 0.6;
+}
+.main-img:hover{
+    opacity: 1.0;
+}
+.content{
+    font-family: "Spicy Rice", serif;
+    color: #dc0c0c;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.content h5{
+    color: black;
+}
+.search{
+    position: relative;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.search input{
+    width: 400px;
+    box-sizing: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(./search_icon.png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 40px;
+  }
+.description{
+    /* font-family: "Spicy Rice", serif; */
+    font-weight: bol;
+    text-indent: 40px;
+    text-align: justify;
+    align-items: center;
+    letter-spacing: 3px;
+    padding: 0px 20px 0px 20px;
+}
+.heading{
+    font-family: "Spicy Rice", serif;
+    background-image: url(https://images.pexels.com/photos/3530114/pexels-photo-3530114.jpeg?auto=compress&cs=tinysrgb&w=600);
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 100px;
+      font-size: xx-large;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-weight: 800;
+      -webkit-font-smoothing: antialiased;
+}
+.img-row{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        align-items: center;
+        gap: 2.5rem;
+        margin-top: 5rem;
+}
+.img-content{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.img-content img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(236, 230, 230, 0.1), #f07f7f);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0, 40px;
+    transition: height 0.5s;
+}
+.layer h5{
+    font: larger;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.layer i{
+    color: #dc0c0c;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #ccc;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.layer a{
+    text-decoration-line: none;
+}
+.img-content:hover img{
+    transform: scale(1.1);
+}
+.img-content:hover .layer{
+    height: 100%;
+}
+.contact{
+    display: inline-flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin: 5px;
+    padding: 10px 20px 10px 40px;
+}
+.contact-text h2{
+    font-family: "Spicy Rice", serif;
+    font-size: 2rem;
+    line-height: 0.5;
+}
+.contact-form form{
+    position: absolute;
+}
+.contact-form form input, form textarea{
+    width: 100%;
+    padding: 14px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+.contact-form textarea{
+    resize: none;
+    height: 240px;
+}
+.contact-form .submit{
+    font-family: "Spicy Rice", serif;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #800f0f;
+    color: white;
+    width: 160px;
+    transition: all .45s ease;
+
+}
+.contact-form .submit:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+/* .end{
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #ccc;
+} */
+.end {
+    background-color: #f8e6ccde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 500px;
+}
+.end p{
+    color: black;
+    font-family: "Spicy Rice", serif;
+    padding-top: 20px;
+}
+
+.end i{
+    padding: 20px;
+    border-radius: 8px;
+    font-size: xx-large;
+    color: #800f0f;
+    justify-content: flex-end;
+}
+.top{
+    padding-left: 40%;
+}
+
+.services-content{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+.box{
+    padding: 35px 45px;
+    border-radius: 8px;
+    transition: all .45s ease;
+    gap: 2em;
+}
+.box>.bg1{
+    background-image: url(https://images.pexels.com/photos/1840624/pexels-photo-1840624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg2{
+    background-image: url(https://images.pexels.com/photos/3063362/pexels-photo-3063362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg3{
+    background-image: url(https://images.pexels.com/photos/2860804/pexels-photo-2860804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg4{
+    background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=600);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg5{
+    background-image: url(https://images.pexels.com/photos/4069091/pexels-photo-4069091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg6{
+    background-image: url(https://images.pexels.com/photos/19142320/pexels-photo-19142320/free-photo-of-warriors-and-horses-on-fresco.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 350px;
+    height: 500px;
+}
+.box>.bg7{
+    background-image: url(https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg8{
+    background-image: url(https://images.pexels.com/photos/22119673/pexels-photo-22119673/free-photo-of-fries-falling-on-a-burger.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg9{
+    background-image: url(https://images.pexels.com/photos/4344427/pexels-photo-4344427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg10{
+    background-image: url(https://images.pexels.com/photos/8380246/pexels-photo-8380246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg11{
+    background-image: url(https://images.pexels.com/photos/3753021/pexels-photo-3753021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg12{
+    background-image: url(https://i.pinimg.com/736x/39/37/55/393755e7a9bd2660c19b90fb1b066784.jpg);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg13{
+    background-image: url(https://images.pexels.com/photos/15705944/pexels-photo-15705944/free-photo-of-one-of-the-travellers-sculptures-by-bruno-catalano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box>.bg14{
+    background-image: url(https://images.pexels.com/photos/3441746/pexels-photo-3441746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width: 400px;
+    height: 600px;
+}
+.box h3{
+    font-size: xx-large;
+    font-weight: 600;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Spicy Rice", serif;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box a{
+    background-color: #800f0f;
+    color: white;
+    margin: 0px auto;
+    font-family: "Spicy Rice", serif;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    
+}
+.box:hover{
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+.btn{
+    display: inline-block;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all .45s ease;
+}
+.box a:hover{
+    transform: scale(0.9);
+    color: #800f0f;
+    background-color: white;
+    font-family: "Spicy Rice", serif;
+}
+
+.card {
+    display: flex;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(138, 4, 4, 0.947);
+    max-width: 300px;
+    text-align: center;
+    font-family: "Spicy Rice", serif;
+    height: 300px;
+    margin: 30px;
+    position: relative;
+  }
+  .card h1{
+    font-size: x-large;
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #800f0f;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 5%;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
